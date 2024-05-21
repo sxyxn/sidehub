@@ -6,7 +6,7 @@ const http = require('http');
 const server = http.createServer(app);
 const db = require('./query.js');
 
-app.use(cors({ credentials: true, origin: ["http://localhost:3000"] }));
+app.use(cors({ credentials: true, origin: ["http://localhost:3002"] }));
 app.use(express.json());
 
 app.get('/', (req, res) => {

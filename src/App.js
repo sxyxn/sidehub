@@ -8,8 +8,9 @@ import { useState } from 'react';
 import { ModalLogin, ModalSignup } from './modal';
 import Main from './pages/main';
 import Project from './pages/project';
-import Portfolio from './pages/portfolio';
-import Study from './pages/study';
+import Mypage from './pages/mypage';
+import Team from './pages/maketeam';
+
 
 function App() {
   const [showLogin, setShowLogin] = useState(false);
@@ -21,33 +22,22 @@ function App() {
 
   return (
     <div className="App">
+
       {/* nav start */}
       <Navbar data-bs-theme="light" id="top-navbar">
-        <Container>
-          <div id="logo-wrapper">
-            <Link to = "/">
-              <Navbar.Brand href="#home">SideHub</Navbar.Brand>
+        
+          <div className="Logo">
+            <Link to = "/" style={{ textDecoration: 'none' }}>
+            <p className="customText">SideHub</p>
             </Link>
           </div>
-
-          <Container id="left-nav-wrapper">
-            <Nav className="me-auto">
-              <Link to = "/project">
-                <Nav.Link href="#project">프로젝트</Nav.Link>
-              </Link>
-              <Link to = "/portfolio">
-                <Nav.Link href="portfolio">포트폴리오</Nav.Link>
-              </Link>
-              <Link to = "/study">
-                <Nav.Link href="#study">스터디</Nav.Link>
-              </Link>
-            </Nav>
-          </Container>
-
+          
+        <Container>
           <Container id="right-nav-wrapper">
             <Nav>
               <Nav.Link onClick={handleShowLogin}>로그인</Nav.Link>
               <Nav.Link onClick={handleShowSignup}>회원가입</Nav.Link>
+              <Nav.Link as={Link} to="/maketeam" className='maketeam'>팀원모집</Nav.Link>
             </Nav>
           </Container>
         </Container>
@@ -81,18 +71,18 @@ function App() {
           }
         />
         <Route
-          path="/portfolio"
+          path="/mypage"
           element={
             <div>
-              <Portfolio />
+              <Mypage />
             </div>
           }
         />
         <Route
-          path="/study"
+          path="/maketeam"
           element={
             <div>
-              <Study />
+              <Team />
             </div>
           }
         />
