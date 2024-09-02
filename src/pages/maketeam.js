@@ -9,7 +9,7 @@ function Maketeam(){
     const [projectDescription, setProjectDescription] = useState('');
 
     return(
-        <div>
+        <div className='maketeam'>
             <div id="make-content-wrapper" className="make-container">
                 <div className="make-main-title">팀원 모집하기 👨‍💻</div>
                 <div className="line"></div>

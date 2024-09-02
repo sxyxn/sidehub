@@ -40,8 +40,8 @@ const App = () => {
 
   return (
     <div className='position-container'>
-      <SelectBox options={positions} defaultOption="포지션" onSelect={handlePositionSelect} />
-      <SelectBox options={techs} defaultOption="기술" onSelect={handleTechSelect} />
+      <SelectBox className = "selectBox" options={positions} defaultOption="포지션" onSelect={handlePositionSelect} />
+      <SelectBox className = "selectBox" options={techs} defaultOption="기술" onSelect={handleTechSelect} />
     </div>
   );
 };

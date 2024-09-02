@@ -48,7 +48,8 @@ function ModalLogin({ show, handleClose }) {
           </Form>
         </Modal.Body>
         <Modal.Footer>
-          <Button variant="primary" onClick={handleLogin}>
+          <Button variant="primary" onClick={handleLogin} 
+            style={{backgroundColor:'black', border:'none'}}>
             Sign In
           </Button>
         </Modal.Footer>
@@ -150,7 +151,8 @@ function ModalSignup({ show, handleClose }) {
           </Form>
         </Modal.Body>
         <Modal.Footer>
-          <Button variant="primary" onClick={handleSignup}>
+          <Button variant="primary" onClick={handleSignup}
+            style={{backgroundColor:'black', border:'none'}}>
             Sign up
           </Button>
         </Modal.Footer>
